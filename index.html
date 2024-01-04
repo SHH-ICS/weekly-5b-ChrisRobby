@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
+<html>
   <head>
-    <title></title>
+    <title>Calculation of pi</title>
 
     <!-- MDL Inclusions -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -12,7 +13,18 @@
   <body>
   
     <form name="myForm" action="handler.php" method="POST">
-          
+
+      <!-- mdl textfield -->
+      <div class="mdl-textfield mdl-js-textfield">
+        <label class="mdl-textfield__label" for="number">Enter the number of iterations of the calculation</label>
+        <input class="mdl-textfield__input" type="text" name="number" id="number" pattern="[0-9]*">
+        <span class="mdl-textfield__error">Numbers only</span>
+      </div>
+
+      <!-- Accent-colored raised button with ripple -->
+	  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">
+        Enter
+      </button>
     </form>
 
   </body>
