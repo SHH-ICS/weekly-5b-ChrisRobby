@@ -10,12 +10,14 @@
   <body>
     
     <?php
-    function calcPie(int $n):float {
-      $pie = 3.14159;
+    function calcPie(int $number):float {
+      $pie = 0.0;
+      for ($n = 0; $n < $number; $n++) {
+        $pie = $pie + 4.0 * ((-1)**$n / (2.0 * $n + 1.0));
+      }
       return $pie;
     }
 
-    $pi = 3.14159;
     $number = "";
     if ( isset( $_POST['number'] ) ){
       $number = $_POST['number'];
@@ -23,7 +25,7 @@
     echo "<h1>My Calculation of PI</h1>\n";
     echo "<p>The number of iterations is ".$number."</p>\n";
     echo "<p>The calculated value of PI is ".calcPie($number)."</p>\n";
-    echo "<p>The actual value of PI is ".$pi."</p>\n";
+    echo "<p>The actual value of PI is ".pi()."</p>\n";
     ?>
     
   </body>
