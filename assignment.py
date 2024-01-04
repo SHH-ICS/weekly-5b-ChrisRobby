@@ -8,14 +8,14 @@ def calcPie(number):
     return pie
 
 # get the number of iterations
-number = int (input ("Enter a number between 1-500: "))
+number = int (input ("Enter a number between 1-100000: "))
 
 pie = 0.0
 
 # validate input
 if number < 1 :
     print ('Number too small')
-elif number > 500 :
+elif number > 100000 :
     print ('Number too big')
 else:
     # calculate the value of pi for n iterations
